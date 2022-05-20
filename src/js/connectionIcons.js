@@ -1,14 +1,20 @@
 import images from './connectResource'
+import func from './getUrlResource'
 
 const mainFolder = 'assets'
 
-const svgIconPlaceholder = document.querySelectorAll('.svg-icon-placeholder');
+const svgIconPlaceholder = document.querySelectorAll('.svg-placeholder')
+
+let iconName
+let fullIconUrl
+let MinifiedIconUrl
+let icon
+
 
 svgIconPlaceholder.forEach((item) => {
-    let iconName = item.getAttribute('data-icon');
-    let iconURL = images[`./${iconName}.svg`]
-    let urlIndex = iconURL.indexOf(mainFolder)
-    iconURL = iconURL.slice(urlIndex)
-    var icon = `<object data="${iconURL}" type="image/svg+xml"></object>`;
-    item.innerHTML = icon;
+    iconName = item.getAttribute('data-icon')
+    fullIconUrl = func.getFullIconUrl(images, iconName)
+    MinifiedIconUrl = func.getMinifiedIconUrl(mainFolder, fullIconUrl)
+    icon = `<object data="${MinifiedIconUrl}" type="image/svg+xml"></object>`
+    item.innerHTML = icon
 })
