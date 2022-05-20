@@ -1,2 +1,2 @@
-mixin image(name)
-    img.src(src=require(`../src/images/${name}.jpg`) alt=name)
+mixin image(name, extension)
+	.img-placeholder(data-img=name, data-extension=extension)
