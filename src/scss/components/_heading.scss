@@ -1,20 +1,8 @@
-// h1,
-// h2,
-// .btn,
-// .item-help__desc,
-// .in-addition__credit-card-number,
-// .popup__inner,
-// footer {
-//     font-family: Georgia, 'Times New Roman', Times, serif;
-// }
-// h2 {
-//     font-size: 35px;
-//     @include lh(45, 35);
-//     letter-spacing: 0.06em;
-//     color: $titleColor;
-//     text-align: center;
-//     @media (max-width: 425px) {
-//         font-size: 25px;
-//     }
-// }
-// EXAMPLE ^
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 56px;
+    @include lh(74, 56);
+    letter-spacing: 0.04em;
+    color: $blue-01;
+}

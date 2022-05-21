@@ -1,0 +1,21 @@
+-	
+	let nav1 = {
+		about: 'About',
+		whatwedo: 'What We Do',
+		project: 'Project',
+		howitwork: 'How It Work With Us'
+	}
+	let nav2 = {
+		'https://www.instagram.com/': 'Instagram',
+		'https://www.facebook.com/': 'Facebook',
+		'https://www.linkedin.com/': 'LinkedIn',
+		'https://www.youtube.com/': 'Youtube'
+	};
+
+mixin genNav(nav, classLi, classA)
+	each value, key in nav
+		li(class=classLi)
+			if(nav == nav2)
+				a(class=classA, href=key, target="_blank", title=value)=value
+			else
+				a(class=classA, href="#"+key, title=value)=value
