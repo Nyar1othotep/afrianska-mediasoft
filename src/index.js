@@ -25,8 +25,12 @@ import rewriteData from './js/rewriteData'
 //      </div>`
 // }
 
-const burger = document.querySelector('.header__burger');
-const menu = document.querySelector('.header__menu');
+const burger = document.querySelector('.header__burger')
+const menu = document.querySelector('.header__menu')
+const menuLists = document.querySelectorAll('.header__menu>*')
+let menuListsId = []
+
+menuLists.forEach(item => menuListsId.push(item.id))
 
 const closeMenuBurger = () => {
     burger.classList.remove('active')
@@ -40,6 +44,32 @@ const closeOpenMenuBurger = () => {
     document.body.classList.toggle('lock')
 }
 
+const closeMenuNav = (target) => {
+    let item = document.getElementById(target)
+    item.querySelector('.menu-header__nav').classList.toggle('active')
+}
+
+const closeAllMenuNav = () => {
+    menuLists.forEach(item => {
+        item.querySelector('.menu-header__nav').classList.remove('active')
+    })
+}
+
+const closeMenuItem = (target) => {
+    let item = document.getElementById(target)
+    item.querySelectorAll('.menu-header__item').forEach(e => {
+        e.classList.toggle('active')
+    })
+}
+
+const closeAllMenuItem = () => {
+    menuLists.forEach(item => {
+        item.querySelectorAll('.menu-header__item').forEach(e => {
+            e.classList.remove('active')
+        })
+    })
+}
+
 document.addEventListener('click', (event) => {
     if (event.target.closest('.header__burger')) {
         closeOpenMenuBurger()
@@ -49,23 +79,16 @@ document.addEventListener('click', (event) => {
     }
     if (!event.target.closest('.header__menu') && !event.target.closest('.header__burger')) {
         closeMenuBurger()
+        closeAllMenuNav()
+        closeAllMenuItem()
     }
 })
 
-const firstMenu = document.getElementById('first')
-const secondMenu = document.getElementById('second')
-
 document.addEventListener('click', (event) => {
-    if (event.target.closest('#first')) {
-        firstMenu.querySelector('.menu-header__nav').classList.toggle('active')
-        firstMenu.querySelectorAll('.menu-header__item').forEach(item => {
-            item.classList.toggle('active')
-        })
-    }
-    if (event.target.closest('#second')) {
-        secondMenu.querySelector('.menu-header__nav').classList.toggle('active')
-        secondMenu.querySelectorAll('.menu-header__item').forEach(item => {
-            item.classList.toggle('active')
-        })
+    for (let i = 0; i < menuListsId.length; i++) {
+        if (event.target.closest(`#${menuListsId[i]}`)) {
+            closeMenuNav(menuListsId[i])
+            closeMenuItem(menuListsId[i])
+        }
     }
 })
