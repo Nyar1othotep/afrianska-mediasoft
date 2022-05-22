@@ -73,9 +73,13 @@ const closeAllMenuItem = () => {
 document.addEventListener('click', (event) => {
     if (event.target.closest('.header__burger')) {
         closeOpenMenuBurger()
+        closeAllMenuNav()
+        closeAllMenuItem()
     }
     if (event.target.closest('.menu-header__link')) {
         closeMenuBurger()
+        closeAllMenuNav()
+        closeAllMenuItem()
     }
     if (!event.target.closest('.header__menu') && !event.target.closest('.header__burger')) {
         closeMenuBurger()

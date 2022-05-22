@@ -2,9 +2,6 @@
 
 .header {
     padding: 40px 0px 0px 0px;
-    @media (max-width: 768px) {
-        padding: 20px 0px 0px 0px;
-    }
     position: absolute;
     width: 100%;
     left: 0;
@@ -87,10 +84,6 @@
         transition: all 0.3s ease-in-out 0s;
         z-index: 10;
         border-radius: 50px 0px 0px 0px;
-        @media (max-width: 480px) {
-            width: 100%;
-            border-radius: 0;
-        }
         &>*:not(:last-child) {
             margin: 0px 0px 32px 0px;
         }

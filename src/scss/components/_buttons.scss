@@ -1,10 +1,16 @@
 .btn {
-    //  border-radius
-    //  padding
-    //  font-size
-    //  @include lh(line-height, font-size)
+    width: 220px;
+    padding: 5px 10px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    min-height: 56px;
+}
+
+.btn--blue-04 {
+    color: $white;
+    background: $blue-04;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
 }

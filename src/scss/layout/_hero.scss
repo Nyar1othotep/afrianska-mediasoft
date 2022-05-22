@@ -1,1 +1,32 @@
 /* ----------------HERO------------------------------------------------- */
+
+.hero {
+    position: relative;
+    background: linear-gradient(0deg, rgba(152, 195, 232, 0.2) 8.84%, rgba(152, 195, 232, 0) 31.12%);
+    &__body {
+        padding: 189px 0px 190px 0px;
+        max-width: 515px;
+        & p {
+            max-width: 425px;
+            margin: 0px 0px 75px 0px;
+        }
+    }
+    &__title {
+        margin: 0px 0px 32px 0px;
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__button {
+        letter-spacing: 0.4px;
+    }
+}
+
+.hero__illustration {
+    position: absolute;
+    right: 15.3%;
+    bottom: 6%;
+    user-select: none;
+}
