@@ -35,6 +35,10 @@ button {
     background: none;
 }
 
+.svg-placeholder {
+    user-select: none;
+}
+
 
 /* ----------------WRAPPER------------------------------------------------- */
 
@@ -55,6 +59,10 @@ main {
 
 #whatwedo {
     padding: 190px 0px 192px 0px;
+}
+
+#project {
+    padding: 0px 0px 192px 0px;
 }
 
 

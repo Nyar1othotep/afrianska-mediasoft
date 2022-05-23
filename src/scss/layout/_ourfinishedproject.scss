@@ -1,0 +1,107 @@
+/* ----------------OURFINISHEDPROJECT------------------------------------------------- */
+
+.project {
+    &__heading {
+        display: flex;
+        align-items: flex-start;
+        margin: 0px 0px 96px 0px;
+        & p {
+            max-width: 540px;
+        }
+    }
+    &__title {
+        margin: 0px 93px 0px 0px;
+        max-width: 227px;
+    }
+    &__cards-row>*:not(:last-child) {
+        margin: 0px 0px 96px 0px;
+    }
+    &__cards-other {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+.project-main-card {
+    max-width: 100%;
+}
+
+.project-card {
+    width: 422px;
+}
+
+.item-project-main-card,
+.item-project-card {
+    position: relative;
+    height: 417px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(89.99deg, #1F3F68 3.62%, rgba(31, 63, 104, 0.37) 97.78%);
+        z-index: 5;
+    }
+    &__content {
+        position: absolute;
+        right: 48px;
+        top: 48px;
+        z-index: 20;
+        text-align: right;
+    }
+    &__name {
+        margin: 0px 0px 8px 0px;
+        font-family: 'Gilroy Medium';
+        font-weight: 500;
+        font-size: 28px;
+        @include lh(46, 28);
+        color: $white;
+    }
+    &__place {
+        font-size: 16px;
+        @include lh(46, 16);
+        color: $white;
+        opacity: 0.8;
+    }
+    & .svg-placeholder,
+    & .img-placeholder {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    & .svg-placeholder {
+        z-index: 10;
+        bottom: -36px;
+        left: -23px;
+    }
+    & .img-placeholder img {
+        height: 417px;
+        max-width: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover .img-placeholder img {
+        transform: scale(1.1);
+    }
+}
+
+.item-project-card {
+    &::after {
+        background: linear-gradient(308.85deg, rgba(66, 165, 245, 0.4) -1.71%, rgba(21, 101, 192, 0.6) 74.54%);
+    }
+    &__content {
+        left: 32px;
+        top: 24px;
+        text-align: left;
+    }
+    &__name {
+        margin: 0px 0px 4px 0px;
+    }
+}
