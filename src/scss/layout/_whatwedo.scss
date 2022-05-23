@@ -1,0 +1,87 @@
+/* ----------------WHATWEDO------------------------------------------------- */
+
+.whatwedo {
+    &__body {
+        position: relative;
+    }
+    &__title {
+        max-width: 358px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+    &__cards {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 1152px;
+        width: 100%;
+        & .card:nth-child(1) {
+            & .item-card__images .svg-placeholder {
+                margin: -70px 0px 0px 0px;
+            }
+        }
+        & .card:nth-child(2) {
+            position: absolute;
+            align-self: flex-start;
+            top: 25%;
+            left: 80px;
+        }
+    }
+}
+
+.card {
+    max-width: 380px;
+    background: $white;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+}
+
+.item-card {
+    padding: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    &__images {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 0px 56px 0px;
+    }
+    &__title {
+        margin: 0px 0px 16px 0px;
+    }
+    & p {
+        margin: 0px 0px 32px 0px;
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+    &__button {
+        font-family: 'Gilroy Semibold';
+        font-size: 14px;
+        @include lh(30, 14);
+        color: $blue-04;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:hover .svg-placeholder {
+            animation: move 0.6s ease-in-out infinite alternate forwards;
+        }
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(5px);
+    }
+}

@@ -1,0 +1,11 @@
+mixin genCard(icon, title, desc)
+	.card
+		.card__item.item-card
+			.item-card__images
+				+icon(icon)
+			h4.item-card__title.title=title
+			p.item-card__desc=desc
+			.item-card__buttons
+				button.item-card__button.btn-learn-more 
+					div Learn more
+					+icon('icon-arrow')

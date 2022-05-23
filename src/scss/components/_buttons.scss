@@ -9,6 +9,20 @@
     min-height: 56px;
 }
 
+.btn-learn-more {
+    width: 127px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    min-height: 30px;
+    & .svg-placeholder {
+        display: flex;
+        align-items: center;
+    }
+}
+
 .btn--blue-04 {
     color: $white;
     background: $blue-04;

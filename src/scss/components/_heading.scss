@@ -6,3 +6,19 @@ h1 {
     letter-spacing: 0.04em;
     color: $blue-01;
 }
+
+h2 {
+    font-family: 'Gilroy Semibold';
+    font-weight: 600;
+    font-size: 36px;
+    @include lh(46, 36);
+    color: $blue-02;
+}
+
+h4 {
+    font-family: 'Gilroy Semibold';
+    font-weight: 600;
+    font-size: 20px;
+    @include lh(30, 20);
+    color: $blue-01;
+}

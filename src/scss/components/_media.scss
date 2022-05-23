@@ -21,6 +21,9 @@
     .hero__body {
         padding: 149px 0px 150px 0px;
     }
+    #whatwedo {
+        padding: 100px 0;
+    }
 }
 
 @media (max-width: 992px) {
@@ -32,11 +35,23 @@
         transform: scale(0.7);
         bottom: 3%;
     }
+    .whatwedo__cards .card:nth-child(2) {
+        left: 0;
+    }
+}
+
+@media (max-width: 860px) {
+    .card {
+        max-width: 360px;
+    }
 }
 
 @media (max-width: 768px) {
     h1 {
         font-size: 42px;
+    }
+    h2 {
+        font-size: 32px;
     }
     .header {
         padding: 20px 0px 0px 0px;
@@ -52,6 +67,42 @@
     }
     .hero__title {
         margin: 0px 0px 22px 0px;
+    }
+    #whatwedo {
+        padding: 60px 0;
+    }
+    .whatwedo {
+        &__title {
+            max-width: 358px;
+            position: static;
+            margin: 0px 0px 60px 0px;
+        }
+        &__cards {
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            &>*:not(:last-child) {
+                margin: 0px 0px 30px 0px;
+            }
+            & .card:nth-child(2) {
+                position: static;
+                align-self: auto;
+            }
+        }
+    }
+    .card {
+        max-width: 380px;
+    }
+    .item-card {
+        &__images {
+            margin: 0px 0px 36px 0px;
+        }
+        &__title {
+            margin: 0px 0px 12px 0px;
+        }
+        & p {
+            margin: 0px 0px 22px 0px;
+        }
     }
 }
 
@@ -72,6 +123,12 @@
     h1 {
         font-size: 36px;
     }
+    h2 {
+        font-size: 26px;
+    }
+    h4 {
+        font-size: 18px;
+    }
     .hero__body {
         padding: 100px 0px 320px 0px;
     }
@@ -86,5 +143,32 @@
     }
     .hero__illustration {
         transform: scale(0.42);
+    }
+    #whatwedo {
+        padding: 40px 0;
+    }
+    .whatwedo {
+        &__title {
+            margin: 0px 0px 40px 0px;
+        }
+        &__cards {
+            & .card:nth-child(1) {
+                & .item-card__images .svg-placeholder {
+                    width: 215px;
+                }
+            }
+        }
+    }
+    .card {
+        max-width: 380px;
+    }
+    .item-card {
+        padding: 36px;
+        &__images {
+            margin: 0px 0px 26px 0px;
+        }
+        & p {
+            margin: 0px 0px 16px 0px;
+        }
     }
 }
