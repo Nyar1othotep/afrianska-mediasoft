@@ -33,11 +33,18 @@ block content
 			section.project#project
 				.project__container._container 
 					.project__body 
-						.project__heading
-							h2.project__title.title Our Finished Project 
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+						+headingBlock('Our Finished Project', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.')(class="project__title")
 						.project__cards-row 
 							+genMainProjectCard('Smart Home Installation', 'In Muarakana Housing Estate', 'our-finished-project', 'jpg')
 							.project__cards-other
 								+genProjectCard('Sparklite App', 'Marketplace', 'our-finished-project-2', 'jpg')
 								+genProjectCard('Car-Rapetition App', 'Board', 'our-finished-project-3', 'jpg')
+
+			section.ourclient#ourclient
+				.ourclient__container._container 
+					.ourclient__body 
+						+headingBlock('Our Beloved Client', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.')(class="ourclient__title")
+						.ourclient__logos 
+							+genClientLogos(logos,'ourclient__list', 'ourclient__item', 'ourclient__link')
+
+

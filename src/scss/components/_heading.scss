@@ -22,3 +22,16 @@ h4 {
     @include lh(30, 20);
     color: $blue-01;
 }
+
+.heading__block {
+    display: flex;
+    align-items: flex-start;
+    margin: 0px 0px 96px 0px;
+    & h2 {
+        margin: 0px 93px 0px 0px;
+        max-width: 227px;
+    }
+    & p {
+        max-width: 540px;
+    }
+}

@@ -27,6 +27,9 @@
     #project {
         padding: 0px 0px 100px 0px;
     }
+    .ourclient {
+        border-radius: 100px 0px 0px 0px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -41,14 +44,21 @@
     .whatwedo__cards .card:nth-child(2) {
         left: 0;
     }
-    .project__title {
-        margin: 0px 33px 0px 0px;
+    .heading__block {
+        & h2 {
+            margin: 0px 33px 0px 0px;
+        }
     }
 }
 
 @media (max-width: 860px) {
     .card {
         max-width: 360px;
+    }
+    .ourclient {
+        &__list {
+            grid-template: repeat(4, 128px) / repeat(2, 1fr);
+        }
     }
 }
 
@@ -113,7 +123,7 @@
             margin: 0px 0px 22px 0px;
         }
     }
-    .project__heading {
+    .heading__block {
         margin: 0px 0px 60px 0px;
         & p {
             max-width: 400px;
@@ -130,6 +140,9 @@
     }
     .item-project-card {
         height: 300px;
+    }
+    .ourclient {
+        padding: 60px 0px 0px 0px;
     }
 }
 
@@ -220,8 +233,12 @@
             margin: 0px 0px 16px 0px;
         }
     }
-    .project__heading {
+    .heading__block {
         margin: 0px 0px 40px 0px;
+        flex-direction: column;
+        & h2 {
+            margin: 0px 0px 20px 0px;
+        }
     }
     .project__cards-row>*:not(:last-child) {
         margin: 0px 0px 40px 0px;
@@ -236,6 +253,11 @@
             transform: scale(0.7);
             bottom: -86px;
             left: -73px;
+        }
+    }
+    .ourclient {
+        &__list {
+            grid-template: auto / 1fr;
         }
     }
 }

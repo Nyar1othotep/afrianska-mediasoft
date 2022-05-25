@@ -1,18 +1,6 @@
 /* ----------------OURFINISHEDPROJECT------------------------------------------------- */
 
 .project {
-    &__heading {
-        display: flex;
-        align-items: flex-start;
-        margin: 0px 0px 96px 0px;
-        & p {
-            max-width: 540px;
-        }
-    }
-    &__title {
-        margin: 0px 93px 0px 0px;
-        max-width: 227px;
-    }
     &__cards-row>*:not(:last-child) {
         margin: 0px 0px 96px 0px;
     }
