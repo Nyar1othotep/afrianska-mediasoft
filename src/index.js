@@ -2,7 +2,6 @@ import './scss/style.scss'
 import './js/connectionImg'
 import './js/connectionIcons'
 import rewriteData from './js/rewriteData'
-
 // let data = [{
 //     img: 'logo.png',
 //     icon: 'icon-home.svg'

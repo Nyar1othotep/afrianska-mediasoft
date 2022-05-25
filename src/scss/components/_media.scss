@@ -122,9 +122,6 @@
     .project__cards-row>*:not(:last-child) {
         margin: 0px 0px 60px 0px;
     }
-    .project-card {
-        width: 364px;
-    }
     .item-project-main-card,
     .item-project-card {
         &__name {
@@ -133,10 +130,6 @@
     }
     .item-project-card {
         height: 300px;
-        & .img-placeholder img {
-            height: 300px;
-            width: 364px;
-        }
     }
 }
 
@@ -202,9 +195,15 @@
             margin: 0px 0px 40px 0px;
         }
         &__cards {
-            & .card:nth-child(1) {
+            & .card {
                 & .item-card__images .svg-placeholder {
-                    width: 215px;
+                    width: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                & .item-card__images .svg-placeholder object {
+                    transform: scale(0.8);
                 }
             }
         }
@@ -226,9 +225,6 @@
     }
     .project__cards-row>*:not(:last-child) {
         margin: 0px 0px 40px 0px;
-    }
-    .project-card {
-        max-width: 290px;
     }
     .item-project-main-card {
         height: 380px;

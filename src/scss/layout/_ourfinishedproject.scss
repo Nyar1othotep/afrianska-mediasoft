@@ -29,7 +29,7 @@
 }
 
 .project-card {
-    width: 422px;
+    max-width: 422px;
 }
 
 .item-project-main-card,
@@ -51,10 +51,7 @@
     }
     &__content {
         position: absolute;
-        right: 48px;
-        top: 48px;
         z-index: 20;
-        text-align: right;
     }
     &__name {
         margin: 0px 0px 8px 0px;
@@ -70,17 +67,6 @@
         color: $white;
         opacity: 0.8;
     }
-    & .svg-placeholder,
-    & .img-placeholder {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-    & .svg-placeholder {
-        z-index: 10;
-        bottom: -36px;
-        left: -23px;
-    }
     & .img-placeholder img {
         height: 417px;
         max-width: 100%;
@@ -92,16 +78,29 @@
     }
 }
 
-.item-project-card {
-    &::after {
-        background: linear-gradient(308.85deg, rgba(66, 165, 245, 0.4) -1.71%, rgba(21, 101, 192, 0.6) 74.54%);
+.item-project-main-card {
+    &__content {
+        right: 48px;
+        top: 48px;
+        text-align: right;
     }
+    & .svg-placeholder,
+    & .img-placeholder {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    & .svg-placeholder {
+        z-index: 10;
+        bottom: -36px;
+        left: -23px;
+    }
+}
+
+.item-project-card {
     &__content {
         left: 32px;
         top: 24px;
         text-align: left;
-    }
-    &__name {
-        margin: 0px 0px 4px 0px;
     }
 }

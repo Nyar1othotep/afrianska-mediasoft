@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+
 
 let mode = "development";
 process.env.NODE_ENV === 'production' ? mode = 'production' : mode = 'development';
@@ -35,7 +37,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "./src/index.pug"
-        })
+        }),
+        new SpriteLoaderPlugin()
     ],
     module: {
         rules: [{
@@ -99,6 +102,13 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    'svg-sprite-loader',
+                    'svgo-loader'
+                ]
             }
         ]
     },
