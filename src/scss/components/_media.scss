@@ -30,6 +30,11 @@
     .ourclient {
         border-radius: 100px 0px 0px 0px;
     }
+    .footer {
+        &::after {
+            border-radius: 0px 100px 0px 0px;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -143,6 +148,12 @@
     }
     .ourclient {
         padding: 60px 0px 0px 0px;
+    }
+    .footer {
+        &::after {
+            width: 100%;
+            border-radius: 0px 0px 0px 0px;
+        }
     }
 }
 

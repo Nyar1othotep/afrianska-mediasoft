@@ -2,8 +2,14 @@
     padding: 96px 0px 0px 0px;
     background: $blue-04;
     border-radius: 200px 0px 0px 0px;
+    &__body {
+        padding: 0px 0px 125px 0px;
+    }
     &__title {
         color: $white;
+    }
+    & .heading__block {
+        margin: 0px 0px 111px 0px;
     }
     & .heading__block p {
         color: $white;
