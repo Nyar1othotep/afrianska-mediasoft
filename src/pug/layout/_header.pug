@@ -4,13 +4,13 @@ header.header
 
 				a.header__logo.logo(href="#")
 					+image('logo', 'png')
-
 				nav.header__menu
 					ul.menu-header__list(id="first")
 						.menu-header__nav
 							h3.menu-header__title About US
 							+icon('icon-arrow-up-down')
 						+genNav(nav1, 'menu-header__item', 'menu-header__link')
+						+genNavPages(pages, 'menu-header__item', 'menu-header__link')
 					ul.menu-header__list(id="second")
 						.menu-header__nav
 							h3.menu-header__title Follow US

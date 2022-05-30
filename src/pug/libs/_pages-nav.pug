@@ -1,0 +1,10 @@
+-	
+	let pages = {
+		'./blog.html': 'Blog Afrianska',
+		'./contactUs.html': 'Contact Us'
+	}
+
+mixin genNavPages(pages, classLi, classA)
+	each value, key in pages
+		li(class=classLi)
+			a(class=classA, href=key, target="_blank", title=value)=value
