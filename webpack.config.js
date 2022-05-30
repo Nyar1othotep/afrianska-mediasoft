@@ -37,7 +37,12 @@ module.exports = {
             template: "./src/index.pug"
         }),
         new HtmlWebpackPlugin({
+            filename: 'blog.html',
             template: "./src/blog.pug"
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contactUs.html',
+            template: "./src/contactUs.pug"
         })
     ],
     module: {
@@ -92,16 +97,6 @@ module.exports = {
                 test: /\.pug$/,
                 loader: 'pug-loader',
                 exclude: /(node_modules|bower_components)/,
-            },
-            {
-                test: /\.m?js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
             },
         ]
     },
