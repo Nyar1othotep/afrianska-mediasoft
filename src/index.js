@@ -95,3 +95,5 @@ document.addEventListener('click', (event) => {
         }
     }
 })
+
+console.log('Куплю гараж');

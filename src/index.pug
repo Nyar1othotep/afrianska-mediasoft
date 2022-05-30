@@ -40,11 +40,11 @@ block content
 								+genProjectCard('Sparklite App', 'Marketplace', 'our-finished-project-2', 'jpg')
 								+genProjectCard('Car-Rapetition App', 'Board', 'our-finished-project-3', 'jpg')
 
+		.footer__wrapper
 			section.ourclient#ourclient
 				.ourclient__container._container 
 					.ourclient__body 
 						+headingBlock('Our Beloved Client', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.')(class="ourclient__title")
 						.ourclient__logos 
 							+genClientLogos(logos,'ourclient__list', 'ourclient__item', 'ourclient__link')
-
-		include pug/layout/_footer
+			include pug/layout/_footer

@@ -27,7 +27,7 @@
     #project {
         padding: 0px 0px 100px 0px;
     }
-    .ourclient {
+    .footer__wrapper {
         border-radius: 100px 0px 0px 0px;
     }
     .footer {
@@ -148,11 +148,30 @@
     }
     .ourclient {
         padding: 60px 0px 0px 0px;
+        & .heading__block {
+            margin: 0px 0px 60px 0px;
+        }
+        &__body {
+            padding: 0px 0px 60px 0px;
+        }
     }
     .footer {
         &::after {
             width: 100%;
             border-radius: 0px 0px 0px 0px;
+        }
+        &__container {
+            padding: 0 15px;
+        }
+        &__top {
+            padding: 60px 0px 60px 0px;
+        }
+        &__row {
+            padding-top: 60px;
+            padding-right: 0;
+        }
+        &__copyright {
+            padding: 0px 0px 34px 0px;
         }
     }
 }
@@ -267,8 +286,34 @@
         }
     }
     .ourclient {
+        & .heading__block {
+            margin: 0px 0px 40px 0px;
+        }
+        &__body {
+            padding: 0px 0px 40px 0px;
+        }
         &__list {
             grid-template: auto / 1fr;
+        }
+    }
+    .footer {
+        &__top {
+            padding: 40px 0px 40px 0px;
+        }
+        &__row {
+            padding: 40px 0px 40px 0px;
+        }
+        &__buttons,
+        &__button {
+            width: 100%;
+        }
+    }
+    .btn--blue-04 {
+        &::before,
+        &::after {
+            left: 12%;
+            width: 77%;
+            height: 56px;
         }
     }
 }
