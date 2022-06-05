@@ -1,7 +1,10 @@
 .page-heading {
-    margin: 130px 0px 0px 0px;
+    margin: 130px 0px 56px 0px;
     background: url('../images/title-bg.png') center center no-repeat;
     background-size: cover;
+    &__container {
+        max-width: 810px;
+    }
     &__body {
         padding: 50px 0;
         text-align: center;

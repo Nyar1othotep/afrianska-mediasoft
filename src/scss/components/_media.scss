@@ -81,13 +81,16 @@
         padding: 20px 0px 0px 0px;
     }
     .page-heading {
-        margin: 90px 0px 0px 0px;
+        margin: 90px 0px 30px 0px;
         &__body {
             padding: 40px 0;
         }
         &__desc {
             font-size: 16px;
         }
+    }
+    .search {
+        padding: 0px 0px 30px 0px;
     }
     .hero__body {
         padding: 120px 0px 450px 0px;

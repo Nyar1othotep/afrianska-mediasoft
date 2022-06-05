@@ -32,6 +32,14 @@ h5 {
     color: $white;
 }
 
+h6 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 41px;
+    @include lh(58, 41);
+    letter-spacing: 0.04em;
+    color: $blue-01;
+}
+
 .heading__block {
     display: flex;
     align-items: flex-start;

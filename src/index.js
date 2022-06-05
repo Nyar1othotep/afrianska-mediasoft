@@ -2,27 +2,63 @@ import './scss/style.scss'
 import './js/connectionImg'
 import './js/connectionIcons'
 import rewriteData from './js/rewriteData'
-// let data = [{
-//     img: 'logo.png',
-//     icon: 'icon-home.svg'
-// }, {
-//     img: 'logo-footer.png',
-//     icon: 'icon-lock.svg'
-// }, {
-//     img: 'logo.png',
-//     icon: 'icon-lock.svg'
-// }]
 
-// let newData = rewriteData(data)
+const getData = (callback) => {
+    fetch('https://nyar1othotep.github.io/data-json-afrianska-article/article.json')
+        .then(response => response.json())
+        .then(json => callback(json))
+}
 
-// for (let i = 0; i < newData.length; i++) {
-//     let img = newData[i]['img']
-//     let icon = newData[i]['icon']
-//     gallery.innerHTML += `<div>
-//     	 <img src="${img}" alt="">
-// 		  <object data="${icon}" type="image/svg+xml"></object>
-//      </div>`
-// }
+const popularArticleRow = document.querySelector('.popular-article__row')
+
+let title
+let text
+let author
+let date
+let readingTime
+let img
+let icon
+
+const renderArticle = (data) => {
+    let newData = rewriteData(data)
+    renderPopularArticle(newData)
+}
+
+getData(renderArticle)
+
+const renderPopularArticle = (data) => {
+        for (let i = 0; i < 4; i++) {
+            title = data[i]['title']
+            text = data[i]['text']
+            author = data[i]['author']
+            date = data[i]['date']
+            readingTime = data[i]['reading-time']
+            img = data[i]['img']
+            icon = data[i]['icon']
+            popularArticleRow.innerHTML += `
+					<div class="popular-article__column">
+						<article class="popular-article__item item-popular-article">
+							<a href="#" class="item-popular-article__image _ibg">
+								${img === undefined ? '' : `<img src="${img}" alt="">`}
+							</a>
+							<div class="item-popular-article__content">
+								<h6>${title}</h6>
+								<p>${text}</p>
+								<div class="item-popular-article__bottom">
+									<div class="item-popular-article__info">
+										<a href="#" class="item-popular-article__author">${author}</a>
+										<p>${date}, ${readingTime}</p>
+									</div>
+									<div class="item-popular-article__links">
+										${icon.reduce((r,i) => `${r}<object data="${i}" type="image/svg+xml"></object>`, "")}
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				`
+		}
+}
 
 const burger = document.querySelector('.header__burger')
 const menu = document.querySelector('.header__menu')
