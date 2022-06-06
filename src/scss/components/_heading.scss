@@ -41,6 +41,15 @@ h6 {
     color: $blue-01;
 }
 
+.contacts__title {
+    font-family: 'Gilroy Semibold';
+    font-size: 20px;
+    @include lh(30, 20);
+    letter-spacing: 0.04em;
+    color: $blue-01;
+    text-transform: uppercase;
+}
+
 .heading__block {
     display: flex;
     align-items: flex-start;

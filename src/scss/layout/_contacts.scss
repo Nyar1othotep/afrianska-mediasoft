@@ -1,0 +1,119 @@
+/* ----------------CONTACTS------------------------------------------------- */
+
+.contacts {
+    padding: 0px 0px 96px 0px;
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__content {
+        max-width: 302px;
+        &>*:not(:last-child) {
+            margin: 0px 0px 40px 0px;
+        }
+        &>*:first-child {
+            margin: 0px 0px 71px 0px;
+        }
+    }
+    &__title {
+        margin: 0px 0px 24px 0px;
+    }
+    &__address address,
+    &__link a {
+        font-family: 'Gilroy Light';
+        font-style: normal;
+        font-size: 16px;
+        @include lh(26, 16);
+        letter-spacing: 0.04em;
+        color: $blue-01;
+        opacity: 0.6;
+    }
+    &__phone,
+    &__service {
+        &>*:not(:last-child) {
+            margin: 0px 0px 16px 0px;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        & .svg-placeholder {
+            display: flex;
+            align-items: center;
+        }
+        &>*:not(:last-child) {
+            margin: 0px 16px 0px 0px;
+        }
+        & a {
+            opacity: 1;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__form {
+        padding: 56px;
+        background: $white;
+        box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        & .title {
+            margin: 0px 0px 48px 0px !important;
+        }
+    }
+}
+
+.form-contacts {
+    &>*:not(:last-child) {
+        margin: 0px 0px 32px 0px;
+    }
+    &__fullname,
+    &__email,
+    &__message {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    & label {
+        margin: 0px 0px 8px 0px;
+        font-family: 'Gilroy Light';
+        font-size: 16px;
+        @include lh(30, 16);
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        opacity: 0.8;
+    }
+    & input,
+    & textarea {
+        padding: 0px 0px 0px 42px;
+        width: 428px;
+        opacity: 0.4;
+        border: 1px solid $blue-03;
+        border-radius: 10px;
+    }
+    & input {
+        min-height: 72px;
+    }
+    & textarea {
+        padding-top: 21px;
+        min-height: 144px;
+        resize: none;
+    }
+    &__btn {
+        margin: 72px 0px 0px 0px;
+        width: 100% !important;
+        font-family: 'Gilroy Semibold';
+        font-size: 16px;
+        @include lh(26, 16);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $white;
+        background: $blue-04;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        min-height: 72px !important;
+    }
+}
+
+.map {
+    padding: 0px 0px 96px 0px;
+}

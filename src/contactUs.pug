@@ -7,4 +7,47 @@ block content
 
 		main.main
 
+			+genPageHeading('Contact Us', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+
+			section.contacts#contacts
+				.contacts__container._container 
+					.contacts__body 
+						.contacts__content 
+							+icon('icon-woman-contact-us')
+							.contacts__address
+								.contacts__title.title Address 
+								address Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.
+							.contacts__phone 
+								.contacts__title.title Phone 
+								.contacts__link
+									+icon('icon-phone')
+									a(href="tel:+6281273134321") +62-812-7313-4321
+								.contacts__link
+									+icon('icon-phone')
+									a(href="tel:+628170001234") +62-817-000-1234
+							.contacts__service
+								.contacts__title.title Online service
+								.contacts__link
+									+icon('icon-language')
+									a(href="mailto:www.afrianska.com") www.afrianska.com
+								.contacts__link
+									+icon('icon-email')
+									a(href="mailto:hello.afrian@gmail.com") hello.afrian@gmail.com
+						form.contacts__form.form-contacts.form
+							.contacts__title.form-contacts__title.title Send us message
+							.form-contacts__fullname 
+								label(for="fullname") Full Name
+								input(type="text", required, name="fullname", id="fullname", placeholder="Your Name") 
+							.form-contacts__email
+								label(for="email") Email
+								input(type="email", required, name="email", id="email", placeholder="Your Email") 
+							.form-contacts__message
+								label(for="message") Message
+								textarea(name="message", required, id="message", placeholder="Your Message") Your Message
+							button(type="submit").form-contacts__btn.btn Submit
+
+			section.map#map
+				.map__container._container
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2327.1019455196606!2d48.393782515875365!3d54.31982908019458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415d375cebcae22f%3A0x4d651807d5566ee2!2sMEDIASOFT!5e0!3m2!1sen!2sru!4v1654526151799!5m2!1sen!2sru" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 		include pug/layout/_footer
