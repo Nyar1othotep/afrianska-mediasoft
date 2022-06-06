@@ -10,6 +10,7 @@ const getData = (callback) => {
 }
 
 const popularArticleRow = document.querySelector('.popular-article__row')
+const AllArticleRow = document.querySelector('.all-article__row')
 
 let title
 let text
@@ -22,6 +23,7 @@ let icon
 const renderArticle = (data) => {
     let newData = rewriteData(data)
     renderPopularArticle(newData)
+    renderAllArticle(newData)
 }
 
 getData(renderArticle)
@@ -42,16 +44,16 @@ const renderPopularArticle = (data) => {
 								${img === undefined ? '' : `<img src="${img}" alt="">`}
 							</a>
 							<div class="item-popular-article__content">
-								<h6>${title}</h6>
-								<p>${text}</p>
-								<div class="item-popular-article__bottom">
-									<div class="item-popular-article__info">
-										<a href="#" class="item-popular-article__author">${author}</a>
+								<h6 class="item-article__title">${title}</h6>
+								<p class="item-article__text">${text}</p>
+								<div class="item-popular-article__bottom item-article__bottom">
+									<div class="item-popular-article__info item-article__info">
+										<a href="#" class="item-popular-article__author item-article__author">${author}</a>
 										<p>${date}, ${readingTime}</p>
 									</div>
-									<div class="item-popular-article__links">
+									<div class="item-popular-article__links item-article__links">
 										${icon.reduce((r,i) => `${r}
-											<a href="#" class="item-popular-article__link">
+											<a href="#" class="item-popular-article__link item-article__link">
 												<object data="${i}" type="image/svg+xml"></object>
 											</a>
 										`, "")}
@@ -62,6 +64,44 @@ const renderPopularArticle = (data) => {
 					</div>
 				`
 		}
+}
+
+const renderAllArticle = (data) => {
+		for (let i = 4; i < data.length; i++) {
+			title = data[i]['title']
+			text = data[i]['text']
+			author = data[i]['author']
+			date = data[i]['date']
+			readingTime = data[i]['reading-time']
+			img = data[i]['img']
+			icon = data[i]['icon']
+			AllArticleRow.innerHTML += `
+				<div class="all-article__column">
+					<article class="all-article__item item-all-article">
+						<a href="#" class="item-all-article__image _ibg">
+							${img === undefined ? '' : `<img src="${img}" alt="">`}
+						</a>
+						<div class="item-all-article__content">
+							<h6 class="item-article__title">${title}</h6>
+							<p class="item-article__text">${text}</p>
+							<div class="item-all-article__bottom item-article__bottom">
+								<div class="item-all-article__info item-article__info">
+									<a href="#" class="item-all-article__author item-article__author">${author}</a>
+									<p>${date}, ${readingTime}</p>
+								</div>
+								<div class="item-all-article__links item-article__links">
+									${icon.reduce((r,i) => `${r}
+										<a href="#" class="item-all-article__link item-article__link">
+											<object data="${i}" type="image/svg+xml"></object>
+										</a>
+									`, "")}
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			`
+	}
 }
 
 const burger = document.querySelector('.header__burger')

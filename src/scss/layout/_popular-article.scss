@@ -1,7 +1,6 @@
-/* ----------------POPULAR-ARTICLE------------------------------------------------- */
+/* ----------------ARTICLE------------------------------------------------- */
 
-.popular-article {
-    padding: 0px 0px 56px 0px;
+.article {
     &__title {
         margin: 0px 0px 32px 0px;
         font-family: 'Gilroy Semibold';
@@ -13,6 +12,59 @@
         opacity: 0.8;
         text-transform: uppercase;
     }
+}
+
+.item-article {
+    &__text {
+        letter-spacing: 0.04em;
+        color: $black;
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        max-width: 310px;
+    }
+    &__links {
+        display: flex;
+        &>*:not(:last-child) {
+            margin: 0px 27px 0px 0px;
+        }
+    }
+    &__author,
+    &__info p {
+        font-size: 14px;
+        @include lh(24, 14);
+        letter-spacing: 0.04em;
+        color: $blue-01;
+    }
+    &__author {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: rgb(255, 0, 0);
+            opacity: 0.6;
+        }
+    }
+    &__link {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            opacity: 0.6;
+        }
+        & object {
+            user-select: none;
+        }
+    }
+}
+
+
+/* ----------------POPULAR-ARTICLE------------------------------------------------- */
+
+.popular-article {
+    padding: 0px 0px 56px 0px;
     &__row {
         display: flex;
         margin: 0px -10px 51px -10px;
@@ -71,47 +123,5 @@
     }
     &__content {
         flex: 1 1 auto;
-        p {
-            letter-spacing: 0.04em;
-            color: $black;
-        }
-    }
-    &__bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-    }
-    &__links {
-        display: flex;
-        &>*:not(:last-child) {
-            margin: 0px 27px 0px 0px;
-        }
-    }
-    &__author,
-    & .item-popular-article__info p {
-        font-size: 14px;
-        @include lh(24, 14);
-        letter-spacing: 0.04em;
-        color: $blue-01;
-    }
-    &__author {
-        transition: all 0.3s ease-in-out;
-        &:hover {
-            color: rgb(255, 0, 0);
-            opacity: 0.6;
-        }
-    }
-    &__link {
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-            opacity: 0.6;
-        }
-        & object {
-            user-select: none;
-        }
     }
 }

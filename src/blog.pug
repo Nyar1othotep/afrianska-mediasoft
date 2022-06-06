@@ -14,11 +14,20 @@ block content
 			section.popular-article#popular-article
 				.popular-article__container._container
 					.popular-article__body 
-						.popular-article__title.title Popular
+						.popular-article__title.article__title.title Popular
 						.popular-article__row
 						.popular-article__all 
 							a(href="#") See all popular article
 					hr
+
+			section.all-article#all-article
+				.all-article__container._container
+					.all-article__body 
+						.all-article__title.article__title.title All article 
+						.all-article__row
+						.all-article__pages.pages-all-article
+							a(href="#").pages-all-article__new New Post
+							a(href="#").pages-all-article__old Old Post
  
 
 		include pug/layout/_footer
