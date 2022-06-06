@@ -1,0 +1,117 @@
+/* ----------------POPULAR-ARTICLE------------------------------------------------- */
+
+.popular-article {
+    padding: 0px 0px 56px 0px;
+    &__title {
+        margin: 0px 0px 32px 0px;
+        font-family: 'Gilroy Semibold';
+        font-size: 20px;
+        font-weight: 600;
+        @include lh(25, 20);
+        letter-spacing: 0.04em;
+        color: $blue-03;
+        opacity: 0.8;
+        text-transform: uppercase;
+    }
+    &__row {
+        display: flex;
+        margin: 0px -10px 51px -10px;
+        flex-wrap: wrap;
+    }
+    &__column {
+        padding: 0px 10px;
+        flex: 0 1 33.333%
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &__all {
+        margin: 0px 0px 24px 0px;
+        font-family: 'Gilroy Semibold';
+        font-weight: 600;
+        font-size: 16px;
+        text-align: right;
+        @include lh(20, 16);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        a {
+            color: $blue-03;
+            opacity: 0.8;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: rgb(255, 0, 0);
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.item-popular-article {
+    &>*:not(:last-child) {
+        margin: 0px 0px 16px 0px;
+    }
+    h6 {
+        margin: 0px 0px 16px 0px;
+    }
+    & .item-popular-article__content {
+        p {
+            margin: 0px 0px 16px 0px;
+        }
+    }
+    & .item-popular-article__info {
+        p {
+            margin: 4px 0px 0px 0px;
+        }
+    }
+    &__image {
+        display: block;
+        padding: 0 0 66% 0;
+    }
+    &__content {
+        flex: 1 1 auto;
+        p {
+            letter-spacing: 0.04em;
+            color: $black;
+        }
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    &__links {
+        display: flex;
+        &>*:not(:last-child) {
+            margin: 0px 27px 0px 0px;
+        }
+    }
+    &__author,
+    & .item-popular-article__info p {
+        font-size: 14px;
+        @include lh(24, 14);
+        letter-spacing: 0.04em;
+        color: $blue-01;
+    }
+    &__author {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: rgb(255, 0, 0);
+            opacity: 0.6;
+        }
+    }
+    &__link {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            opacity: 0.6;
+        }
+        & object {
+            user-select: none;
+        }
+    }
+}

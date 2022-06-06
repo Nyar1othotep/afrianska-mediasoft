@@ -50,7 +50,11 @@ const renderPopularArticle = (data) => {
 										<p>${date}, ${readingTime}</p>
 									</div>
 									<div class="item-popular-article__links">
-										${icon.reduce((r,i) => `${r}<object data="${i}" type="image/svg+xml"></object>`, "")}
+										${icon.reduce((r,i) => `${r}
+											<a href="#" class="item-popular-article__link">
+												<object data="${i}" type="image/svg+xml"></object>
+											</a>
+										`, "")}
 									</div>
 								</div>
 							</div>

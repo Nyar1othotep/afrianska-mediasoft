@@ -34,8 +34,9 @@ h5 {
 
 h6 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 41px;
-    @include lh(58, 41);
+    font-weight: 700;
+    font-size: 23px;
+    @include lh(38, 23);
     letter-spacing: 0.04em;
     color: $blue-01;
 }

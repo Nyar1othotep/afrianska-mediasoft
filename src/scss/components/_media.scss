@@ -67,6 +67,32 @@
     }
 }
 
+@media (min-width: 769px) {
+    .popular-article {
+        &__row {
+            &>*:first-child {
+                margin: 0px 0px 32px 0px !important;
+                & .popular-article__item {
+                    h6 {
+                        margin: 0px 0px 32px 0px !important;
+                        font-size: 45px !important;
+                    }
+                    & .item-popular-article__content {
+                        p {
+                            margin: 0px 0px 50px 0px !important;
+                        }
+                    }
+                    & .item-popular-article__info {
+                        p {
+                            margin: 4px 0px 0px 0px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 42px;
@@ -170,6 +196,18 @@
             padding: 0px 0px 60px 0px;
         }
     }
+    .popular-article {
+        &__row {
+            margin: 0px -10px -26px -10px;
+        }
+        &__column {
+            margin: 0px 0px 26px 0px;
+            flex: 0 1 50%;
+        }
+        &__all {
+            margin-top: 24px;
+        }
+    }
     .footer {
         &::after {
             width: 100%;
@@ -191,6 +229,45 @@
     }
 }
 
+@media (min-width: 644px) {
+    .popular-article {
+        &__row {
+            &>*:first-child {
+                margin: 0px 0px 26px 0px;
+                flex: 0 1 100%;
+                & .popular-article__item {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    gap: 19px;
+                    h6 {
+                        margin: 0px 0px 26px 0px;
+                        font-size: 36px;
+                        @include lh(58, 45);
+                    }
+                    & .item-popular-article__content {
+                        flex: 0 1 41%;
+                        p {
+                            margin: 0px 0px 30px 0px;
+                        }
+                    }
+                    & .item-popular-article__info {
+                        p {
+                            margin: 4px 0px 0px 0px;
+                        }
+                    }
+                    & .item-popular-article__image {
+                        flex: 0 1 59%;
+                        padding: 0;
+                    }
+                    & .item-popular-article__bottom {
+                        max-width: 310px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 644px) {
     .project__cards-other {
         flex-direction: column;
@@ -200,6 +277,14 @@
             transform: scale(0.9);
             bottom: -56px;
             left: -43px;
+        }
+    }
+}
+
+@media (max-width: 535px) {
+    .popular-article {
+        &__column {
+            flex: 0 1 100%;
         }
     }
 }
