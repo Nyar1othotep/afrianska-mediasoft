@@ -10,10 +10,6 @@
 		'https://www.linkedin.com/': 'LinkedIn',
 		'https://www.youtube.com/': 'Youtube'
 	}
-	let navBlog = {
-		'popular-article': 'Popular article',
-		'all-article': 'All article'
-	}
 
 mixin genNav(nav, classLi, classA)
 	each value, key in nav
@@ -21,4 +17,4 @@ mixin genNav(nav, classLi, classA)
 			if(nav == nav2)
 				a(class=classA, href=key, target="_blank", title=value)=value
 			else
-				a(class=classA, href="#"+key, title=value)=value
+				a(class=classA, href="index.html#"+key, title=value)=value
