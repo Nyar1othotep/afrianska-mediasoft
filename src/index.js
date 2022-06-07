@@ -3,6 +3,8 @@ import './js/connectionImg'
 import './js/connectionIcons'
 import rewriteData from './js/rewriteData'
 
+// RENDER ARTICLE
+
 const getData = (callback) => {
     fetch('https://nyar1othotep.github.io/data-json-afrianska-article/article.json')
         .then(response => response.json())
@@ -12,18 +14,12 @@ const getData = (callback) => {
 const popularArticleRow = document.querySelector('.popular-article__row')
 const AllArticleRow = document.querySelector('.all-article__row')
 
-let title
-let text
-let author
-let date
-let readingTime
-let img
-let icon
+let title, text, author, date, readingTime, img, icon
 
 const renderArticle = (data) => {
     let newData = rewriteData(data)
-    renderPopularArticle(newData)
-    renderAllArticle(newData)
+    popularArticleRow === null ? false : renderPopularArticle(newData);
+    AllArticleRow === null ? false : renderAllArticle(newData);
 }
 
 getData(renderArticle)
@@ -104,6 +100,8 @@ const renderAllArticle = (data) => {
 	}
 }
 
+// BURGER MENU
+
 const burger = document.querySelector('.header__burger')
 const menu = document.querySelector('.header__menu')
 const menuLists = document.querySelectorAll('.header__menu>*')
@@ -174,6 +172,18 @@ document.addEventListener('click', (event) => {
             closeMenuItem(menuListsId[i])
         }
     }
+})
+
+
+// PRELOADER
+
+const loader = document.querySelector('.preloader')
+
+document.body.classList.add('lock')
+
+window.addEventListener('load', () => {
+	loader.remove()
+	document.body.classList.remove('lock')
 })
 
 console.log('Куплю гараж');
