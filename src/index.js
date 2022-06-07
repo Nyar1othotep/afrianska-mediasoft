@@ -35,10 +35,10 @@ const renderPopularArticle = (data) => {
             icon = data[i]['icon']
             popularArticleRow.innerHTML += `
 					<div class="popular-article__column">
-						<article class="popular-article__item item-popular-article">
-							<a href="#" class="item-popular-article__image _ibg">
+						<article class="article popular-article__item item-popular-article" title="article-${i+1}">
+							<div class="item-popular-article__image _ibg">
 								${img === undefined ? '' : `<img src="${img}" alt="">`}
-							</a>
+							</div>
 							<div class="item-popular-article__content">
 								<h6 class="item-article__title">${title}</h6>
 								<p class="item-article__text">${text}</p>
@@ -73,10 +73,10 @@ const renderAllArticle = (data) => {
 			icon = data[i]['icon']
 			AllArticleRow.innerHTML += `
 				<div class="all-article__column">
-					<article class="all-article__item item-all-article">
-						<a href="#" class="item-all-article__image _ibg">
+					<article class="article all-article__item item-all-article" title="article-${i+1}">
+						<div class="item-all-article__image _ibg">
 							${img === undefined ? '' : `<img src="${img}" alt="">`}
-						</a>
+						</div>
 						<div class="item-all-article__content">
 							<h6 class="item-article__title">${title}</h6>
 							<p class="item-article__text">${text}</p>
