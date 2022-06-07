@@ -77,8 +77,11 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[hash][ext][query]'
+                },
                 use: [{
                     loader: 'image-webpack-loader',
                     options: {
@@ -92,6 +95,20 @@ module.exports = {
                         },
                     }
                 }]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[hash][ext][query]'
+                },
+            },
+            {
+                test: /\.(svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/svg/[hash][ext][query]'
+                },
             },
             {
                 test: /\.pug$/,
