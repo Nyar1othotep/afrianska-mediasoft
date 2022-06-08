@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 let mode = "development";
 process.env.NODE_ENV === 'production' ? mode = 'production' : mode = 'development';
@@ -43,7 +44,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'contactUs.html',
             template: "./src/contactUs.pug"
-        })
+        }),
+        new CopyPlugin({
+            patterns: [{
+                from: "./src/favicon",
+                to: "assets/favicon"
+            }]
+        }),
     ],
     module: {
         rules: [{
