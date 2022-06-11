@@ -1,0 +1,19 @@
+.search {
+    padding: 0px 0px 56px 0px;
+    &-form {
+        & input {
+            padding: 5px 24px 5px 72px;
+            min-height: 56px;
+            background: $gray-5;
+            border-radius: 10px;
+            width: 100%;
+            background-image: url('../images/icon-search.svg');
+            background-repeat: no-repeat;
+            background-position: 24px center;
+            &::placeholder {
+                color: $blue-01;
+                opacity: 0.6;
+            }
+        }
+    }
+}

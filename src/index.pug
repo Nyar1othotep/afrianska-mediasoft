@@ -1,0 +1,59 @@
+extends pug/layout/_head
+
+block content
+
+	include pug/layout/_preloader
+	
+	.wrapper.main-html
+	
+		include pug/layout/_header
+
+		main.main
+
+			section.hero#hero
+				.hero__illustration.illustration
+
+					include pug/layout/_illustration
+
+				.hero__container._container
+					.hero__body 
+						h1.hero__title.title New Automation Tool for Your Home
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.
+						.hero__buttons
+							a(href="#project") 
+								button.hero__button.btn.btn--blue-04 See Our Project
+
+			section.whatwedo#whatwedo
+				.whatwedo__container._container 
+					.whatwedo__body 
+
+						h2.whatwedo__title.title What we do to help our client grow in digital era,
+
+						.whatwedo__cards
+							+genCard('icon-man-1-wwd', 'Bring Technology To Your Comfrotable Home', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+							+genCard('icon-man-2-wwd', 'Make Your business To Be Better Famous In Internet', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+							+genCard('icon-woman-1-wwd', 'Build Your Digital Product That Suitable For Your Need', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+
+			section.project#project
+				.project__container._container 
+					.project__body 
+						+headingBlock('Our Finished Project', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.')(class="project__title")
+						.project__cards-row 
+							+genMainProjectCard('Smart Home Installation', 'In Muarakana Housing Estate', 'our-finished-project', 'jpg')
+							.project__cards-other
+								.swiper
+									.swiper-wrapper
+										.swiper-slide
+											+genProjectCard('Sparklite App', 'Marketplace', 'our-finished-project-2', 'jpg')
+										.swiper-slide 
+											+genProjectCard('Car-Rapetition App', 'Board', 'our-finished-project-3', 'jpg')
+
+		// Как научусь делать адекватный background с элементами ниже, исправлю
+		.footer__wrapper
+			section.ourclient#ourclient
+				.ourclient__container._container 
+					.ourclient__body 
+						+headingBlock('Our Beloved Client', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.')(class="ourclient__title")
+						.ourclient__logos 
+							+genClientLogos(logos,'ourclient__list', 'ourclient__item', 'ourclient__link')
+			include pug/layout/_footer

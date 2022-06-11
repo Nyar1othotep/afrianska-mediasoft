@@ -1,0 +1,99 @@
+.illustration {
+    &__platform,
+    &__man,
+    &__woman,
+    &__smart-home,
+    &__illustration-bg,
+    &__shadown-illustration {
+        position: absolute;
+    }
+    &__platform {
+        right: 236px;
+        bottom: 171px;
+        z-index: 3;
+    }
+    &__man {
+        right: 473px;
+        bottom: 73px;
+        z-index: 2;
+        animation: levitationMan 1.2s infinite alternate;
+        animation-delay: 0.3s;
+    }
+    &__woman {
+        right: 10px;
+        bottom: 196px;
+        z-index: 3;
+        animation: levitationWoman 1.2s infinite alternate;
+    }
+    &__smart-home {
+        right: 98px;
+        bottom: 350px;
+        z-index: 2;
+        .smart-home {
+            &__lock,
+            &__snowflake,
+            &__camera,
+            &__lamp {
+                position: absolute;
+            }
+            &__lock {
+                right: 169px;
+                bottom: 65px;
+                z-index: 2;
+            }
+            &__snowflake {
+                right: 123px;
+                bottom: 168px;
+                z-index: 2;
+            }
+            &__camera {
+                right: -5px;
+                bottom: 168px;
+                z-index: 2;
+            }
+            &__lamp {
+                right: -50px;
+                bottom: 65px;
+                z-index: 2;
+            }
+            &__home {
+                animation: levitation 1.2s infinite alternate;
+            }
+        }
+    }
+    &__illustration-bg {
+        right: 21px;
+        bottom: 69px;
+    }
+    &__shadown-illustration {
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@keyframes levitation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(6px);
+    }
+}
+
+@keyframes levitationMan {
+    from {
+        transform: translateY(0) rotate(0);
+    }
+    to {
+        transform: translateY(6px) rotate(-1deg);
+    }
+}
+
+@keyframes levitationWoman {
+    from {
+        transform: translateY(0) rotate(0);
+    }
+    to {
+        transform: translateY(5px) rotate(-1deg);
+    }
+}

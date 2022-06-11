@@ -1,0 +1,25 @@
+.page-heading {
+    margin: 0px 0px 56px 0px;
+    background: url('../images/title-bg.png') center center no-repeat;
+    background-size: cover;
+    .main-html & {
+        margin: 130px 0px 56px 0px;
+    }
+    &__container {
+        max-width: 810px;
+    }
+    &__body {
+        padding: 50px 0;
+        text-align: center;
+        &>*:not(:last-child) {
+            margin: 0px 0px 16px 0px;
+        }
+    }
+    &__desc {
+        font-size: 20px;
+        @include lh(30,
+        20);
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.4);
+    }
+}

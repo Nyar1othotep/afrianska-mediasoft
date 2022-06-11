@@ -1,0 +1,16 @@
+mixin genMainProjectCard(name, place, img, extension)
+	.project-main-card
+		.project-main-card__item.item-project-main-card
+			+icon('icon-our-project')
+			+image(img, extension)
+			.item-project-main-card__content 
+				.item-project-main-card__name=name
+				.item-project-main-card__place=place
+
+mixin genProjectCard(name, place, img, extension)
+	.project-card
+		.project-card__item.item-project-card
+			+image(img, extension)
+			.item-project-card__content 
+				.item-project-card__name=name
+				.item-project-card__place=place

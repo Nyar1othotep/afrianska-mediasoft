@@ -1,0 +1,37 @@
+footer.footer 
+	.footer__container._container 
+		.footer__body 
+			.footer__top
+				.footer__heading 
+					h2.footer__title.title Intersted to woek with our team?
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				.footer__buttons 
+					a(href="contactUs.html")
+						button.footer__button.btn.btn--blue-04 Let’s Talk
+			.footer__bottom 
+				.footer__row 
+					.footer__contacts 
+						.footer__logo 
+							a.footer__link(href="#")
+								+image('logo-footer', 'png')
+								span Afrianska 
+						ul.footer__list 
+							li.footer__item
+								span A.
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							li.footer__item
+								span T.
+								a.footer__link(href="tel:+6281273134321") +62-812-7313-4321
+							li.footer__item 
+								span E 
+								a.footer__link(href="mailto:hello.afrian@gmail.com") hello.afrian@gmail.com
+					.footer__about 
+						h3.footer-about__title About US
+						ul.footer__list 
+							+genNav(nav1, 'footer__item', 'footer__link')
+							+genNavPages(pages, 'footer__item', 'footer__link')
+					.footer__follow
+						h3.footer-follow__title Follow US
+						ul.footer__list 
+							+genNav(nav2, 'footer__item', 'footer__link')
+				.footer__copyright 2019 © Afrianska. All rights reserved.

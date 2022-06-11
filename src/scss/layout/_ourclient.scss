@@ -1,0 +1,42 @@
+.ourclient {
+    padding: 96px 0px 0px 0px;
+    &__body {
+        padding: 0px 0px 125px 0px;
+    }
+    &__title {
+        color: $white;
+    }
+    & .heading__block {
+        margin: 0px 0px 111px 0px;
+    }
+    & .heading__block p {
+        color: $white;
+    }
+    &__list {
+        display: grid;
+        grid-template: repeat(2, 128px) / repeat(4, 1fr);
+        grid-column-gap: 1px;
+        grid-row-gap: 1px;
+        background-color: $white;
+    }
+    &__item {
+        background-color: $blue-04;
+    }
+    &__link {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-size: 20px;
+        @include lh(46, 20);
+        letter-spacing: 0.02em;
+        color: $gray-6;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &.more {
+            background: rgb(31, 63, 104, 0.2);
+        }
+    }
+}

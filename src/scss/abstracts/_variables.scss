@@ -1,0 +1,12 @@
+$blue-01: #1F3F68;
+$blue-02: #316099;
+$blue-03: #356EAD;
+$blue-04: #5A98D0;
+$blue-05: #98C3E8;
+$gray-5: #F4F4F4;
+$gray-6: #F2F2F2;
+$white: #FFFFFF;
+$black: #000000;
+@mixin lh($lh, $fz) {
+    line-height: calc(#{$lh} / #{$fz} * 100%);
+}

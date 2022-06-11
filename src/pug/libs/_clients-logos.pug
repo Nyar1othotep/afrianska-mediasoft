@@ -1,0 +1,22 @@
+- 
+	let logos = {
+		client1: 'LOGO CLIENT 1',
+		client2: 'LOGO CLIENT 2',
+		client3: 'LOGO CLIENT 3',
+		client4: 'LOGO CLIENT 4',
+		client5: 'LOGO CLIENT 5',
+		client6: 'LOGO CLIENT 6',
+		client7: 'LOGO CLIENT 7',
+		more: 'More Client',
+	}
+
+mixin genClientLogos(logos,classUl, classLi, classA)
+	ul(class=classUl)
+		each value, key in logos
+			if	(key == 'more')
+				li(class=classLi)
+					a(class=classA, class=key, href=key, target="_blank", title=value)=value
+			else
+				li(class=classLi)
+					a(class=classA, href=key, target="_blank", title=value)=value
+			

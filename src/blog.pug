@@ -1,0 +1,36 @@
+extends pug/layout/_head
+
+block content
+
+	include pug/layout/_preloader
+
+	.wrapper 
+	
+		include pug/layout/_header
+
+		main.main
+
+			+genPageHeading('Blog Afrianska', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+
+			+genSearch('Search Article')
+
+			section.popular-article#popular-article
+				.popular-article__container._container
+					.popular-article__body 
+						.popular-article__title.article__title.title Popular
+						.popular-article__row
+						.popular-article__all 
+							a(href="#") See all popular article
+					hr
+
+			section.all-article#all-article
+				.all-article__container._container
+					.all-article__body 
+						.all-article__title.article__title.title All article 
+						.all-article__row
+						.all-article__pages.pages-all-article
+							a(href="#").pages-all-article__new New Post
+							a(href="#").pages-all-article__old Old Post
+ 
+
+		include pug/layout/_footer
