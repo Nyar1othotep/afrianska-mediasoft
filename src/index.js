@@ -2,6 +2,7 @@ import './scss/style.scss'
 import './js/connectionImg'
 import './js/connectionIcons'
 import rewriteData from './js/rewriteData'
+import './js/swiper-config'
 
 // RENDER ARTICLE
 

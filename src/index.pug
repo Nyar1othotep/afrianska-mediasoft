@@ -4,7 +4,7 @@ block content
 
 	include pug/layout/_preloader
 	
-	.wrapper 
+	.wrapper.main-html
 	
 		include pug/layout/_header
 
@@ -41,8 +41,12 @@ block content
 						.project__cards-row 
 							+genMainProjectCard('Smart Home Installation', 'In Muarakana Housing Estate', 'our-finished-project', 'jpg')
 							.project__cards-other
-								+genProjectCard('Sparklite App', 'Marketplace', 'our-finished-project-2', 'jpg')
-								+genProjectCard('Car-Rapetition App', 'Board', 'our-finished-project-3', 'jpg')
+								.swiper
+									.swiper-wrapper
+										.swiper-slide
+											+genProjectCard('Sparklite App', 'Marketplace', 'our-finished-project-2', 'jpg')
+										.swiper-slide 
+											+genProjectCard('Car-Rapetition App', 'Board', 'our-finished-project-3', 'jpg')
 
 		// Как научусь делать адекватный background с элементами ниже, исправлю
 		.footer__wrapper

@@ -39,6 +39,7 @@
         "webpack-dev-server": "^4.8.1"
     },
     "dependencies": {
-        "css-mqpacker": "^7.0.0"
+        "css-mqpacker": "^7.0.0",
+        "swiper": "^8.2.3"
     }
 }
